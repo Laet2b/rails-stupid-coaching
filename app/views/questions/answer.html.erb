@@ -1,0 +1,29 @@
+<h1>Stupid Coaching</h1>
+
+<div class="container">
+  <div class="question">
+    <h3><%=@answer%></h3>
+    <h3><em>- You</em></h3>
+  </div>
+</div>
+<br>
+
+<div class="container active">
+  <div class="answer">
+    <h3><strong><%= if @answer.downcase == "i am going to work"
+        "Great!"
+      elsif @answer.include?("?")
+        "Silly question, get dressed and go to work!"
+      else
+        "I don't care, get dressed and go to work!"
+      end
+      %></strong></h3>
+    <h3><em>- Your coach</em></h3>
+  </div>
+</div>
+<br>
+
+<h5><%= link_to 'Ask a new question', ask_path %></h5>
+
+
+
